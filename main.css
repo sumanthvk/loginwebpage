@@ -1,0 +1,67 @@
+Body { 
+  background-image: url("8.jpg");
+  background-size: 100%;
+  font-family: Calibri; 
+  text-decoration-color: aliceblue;
+  }
+
+.table1 {
+  margin-top: 5%;
+  box-shadow: 2px 2px 3px 2px black; 
+  border-radius: 0%;
+  padding: 10px;
+  padding-bottom: 5% ;
+  width: 400px;
+}
+
+/*
+.table1 {
+  margin-top: 5%;
+  box-shadow: 2px 2px 3px 2px #ffffff00;
+  border-radius: 1%;
+
+}
+*/  
+
+input[type=text], input[type=password] 
+  { 
+    width: 250px; 
+    margin: 8px 0;
+    padding: 12px 20px; 
+    display: inline-block; 
+    box-sizing: border-box; 
+    margin-bottom: 10px;
+  }
+  
+  
+button { 
+    font-weight: bold;
+    background-color: #2978b5;
+    width: 250px;
+    color: white; 
+    padding: 10px 10px; 
+    margin: 10px ; 
+    margin-bottom: 10px;
+    cursor: pointer; 
+  } 
+
+.button1 { 
+  text-decoration: underline;
+  font-weight: bold;
+  background-color: #ffffff00;
+  width: 250px;
+  color: #2978b5; 
+  padding: 100px 20px; 
+  border-style: none;
+  cursor: pointer; 
+  } 
+
+.regbtn { 
+  background-color: #2978b5; 
+  width: 20%;
+  color: white; 
+  padding: 10px 10px; 
+  margin: 10px ; 
+  border: 1px solid #2978b5; 
+  cursor: pointer; 
+  } 
