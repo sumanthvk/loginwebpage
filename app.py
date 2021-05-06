@@ -5,7 +5,6 @@ import pymsgbox
 app = Flask(__name__)
 
 app.config['MONGO_DBNAME'] = 'admin'
-#app.config['MONGO_URI'] = 'mongodb://sumanth:123456@127.0.0.1:27017/admin'
 app.config['MONGO_URI'] = 'mongodb+srv://<admin>:<password>@cluster0-jtpxd.mongodb.net/admin'
 
 mongo = PyMongo(app)
