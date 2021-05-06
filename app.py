@@ -1,28 +1,12 @@
-#from flask import Flask, render_template, request, url_for, redirect, session
-
-#app = Flask(__name__)
-
-#@app.route('/')
-#def home():
-#    return render_template('index.html')
-
-#@app.route('/signup')
-#def signup():
-#    return render_template('signup.html')
-
-#if __name__ == "__main__":
-#    app.run(debug=True) 
-
 from flask import Flask, render_template, url_for, request, session, redirect
 from flask_pymongo import PyMongo
 import pymsgbox
-import ctypes
 
 app = Flask(__name__)
 
 app.config['MONGO_DBNAME'] = 'admin'
 #app.config['MONGO_URI'] = 'mongodb://sumanth:123456@127.0.0.1:27017/admin'
-app.config['MONGO_URI'] = 'mongodb+srv://Sumanth:kamath@cluster0.xeppp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+app.config['MONGO_URI'] = 'mongodb+srv://<admin>:<password>@cluster0-jtpxd.mongodb.net/admin'
 
 mongo = PyMongo(app)
 
@@ -50,7 +34,6 @@ def login():
             session['username'] = user_name 
             return redirect(url_for('index'))
 
-#   pymsgbox.alert('Invalid username/password!', 'Authetication failed')
     return render_template('invalid.html')
     
 
@@ -67,6 +50,7 @@ def register():
             session['username'] = request.form['username']
             return redirect(url_for('index'))
         
+        pymsgbox.alert('That username already exists!', 'Error')
         return 'That username already exists!'
 
     return render_template('register.html')
